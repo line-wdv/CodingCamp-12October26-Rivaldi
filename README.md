@@ -2,7 +2,7 @@
 
 A small browser dashboard that helps organize the day: live clock and greeting, a focus timer, a to-do list, and quick links. Built with plain HTML, CSS, and vanilla JavaScript. No backend, no build step.
 
-**Live site:** _paste your GitHub Pages URL here_
+**Live site:** [_paste your GitHub Pages URL here_](https://line-wdv.github.io/CodingCamp-12October26-Rivaldi/)
 
 ## Features
 
