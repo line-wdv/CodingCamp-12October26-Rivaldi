@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Life Dashboard</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <div class="app">
+
+    <!-- Greeting: time, date, greeting, custom name, theme toggle -->
+    <header class="masthead">
+      <div class="masthead-bar">
+        <p class="date" id="date"></p>
+        <button type="button" class="btn btn-small" id="theme-toggle">Switch to dark mode</button>
+      </div>
+
+      <p class="clock" id="clock"></p>
+
+      <div class="greeting-row">
+        <h1 class="greeting" id="greeting"></h1>
+        <button type="button" class="btn btn-small" id="name-open">Add your name</button>
+        <form class="inline-form" id="name-form" hidden>
+          <label class="sr-only" for="name-input">Your name</label>
+          <input type="text" id="name-input" maxlength="30" autocomplete="given-name" placeholder="Your name">
+          <button type="submit" class="btn btn-primary btn-small">Save name</button>
+          <button type="button" class="btn btn-small" id="name-cancel">Cancel</button>
+        </form>
+      </div>
+    </header>
+
+    <main class="board">
+
+      <!-- To-do list -->
+      <section class="panel" aria-labelledby="tasks-title">
+        <div class="panel-head">
+          <h2 id="tasks-title">Tasks</h2>
+          <p class="meta" id="task-count"></p>
+        </div>
+
+        <form class="add-form" id="task-form">
+          <label class="sr-only" for="task-input">New task</label>
+          <input type="text" id="task-input" maxlength="120" autocomplete="off" placeholder="What needs to get done today?">
+          <button type="submit" class="btn btn-primary">Add task</button>
+        </form>
+        <p class="message" id="task-message" role="status"></p>
+
+        <ul class="task-list" id="task-list"></ul>
+        <p class="empty" id="task-empty">Nothing planned yet. Add your first task above.</p>
+      </section>
+
+      <div class="side">
+
+        <!-- Focus timer -->
+        <section class="panel" aria-labelledby="timer-title">
+          <div class="panel-head">
+            <h2 id="timer-title">Focus timer</h2>
+            <p class="meta">25 minutes</p>
+          </div>
+          <p class="timer-display" id="timer-display" role="timer">25:00</p>
+          <div class="timer-controls">
+            <button type="button" class="btn btn-primary" id="timer-start">Start</button>
+            <button type="button" class="btn" id="timer-stop">Stop</button>
+            <button type="button" class="btn" id="timer-reset">Reset</button>
+          </div>
+          <p class="message message-info" id="timer-status" role="status">Ready when you are.</p>
+        </section>
+
+        <!-- Quick links -->
+        <section class="panel" aria-labelledby="links-title">
+          <div class="panel-head">
+            <h2 id="links-title">Quick links</h2>
+          </div>
+          <ul class="link-list" id="link-list"></ul>
+          <p class="empty" id="link-empty" hidden>No links yet. Add one below.</p>
+
+          <form class="link-form" id="link-form">
+            <label class="sr-only" for="link-name">Link name</label>
+            <input type="text" id="link-name" maxlength="24" autocomplete="off" placeholder="Name (optional)">
+            <label class="sr-only" for="link-url">Website address</label>
+            <input type="text" id="link-url" inputmode="url" autocomplete="off" placeholder="example.com">
+            <button type="submit" class="btn btn-primary">Add link</button>
+          </form>
+          <p class="message" id="link-message" role="status"></p>
+        </section>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>Everything here is saved in this browser only.</p>
+    </footer>
+  </div>
+</body>
+</html>
